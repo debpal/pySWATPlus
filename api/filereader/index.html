@@ -755,8 +755,7 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
 
               <details class="quote">
                 <summary>Source code in <code>pySWATPlus/FileReader.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  6</span>
-<span class="normal">  7</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  7</span>
 <span class="normal">  8</span>
 <span class="normal">  9</span>
 <span class="normal"> 10</span>
@@ -863,12 +862,7 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
 <span class="normal">111</span>
 <span class="normal">112</span>
 <span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">FileReader</span><span class="p">:</span>
+<span class="normal">114</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">FileReader</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Provide functionality to read, filter, and write data</span>
@@ -882,7 +876,6 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
         <span class="n">usecols</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">filter_by</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">):</span>
-
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Initialize a FileReader instance to read data from a TXT file.</span>
 
@@ -928,11 +921,7 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">header_file</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_fwf</span><span class="p">(</span>
-            <span class="n">path</span><span class="p">,</span>
-            <span class="n">skiprows</span><span class="o">=</span><span class="n">skip_rows</span><span class="p">,</span>
-            <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span>
-        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">_load_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">skip_rows</span><span class="o">=</span><span class="n">skip_rows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
 
@@ -948,7 +937,6 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
     <span class="k">def</span><span class="w"> </span><span class="nf">overwrite_file</span><span class="p">(</span>
         <span class="bp">self</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Overwrite the original TXT file with the modified DataFrame content.</span>
 <span class="sd">        If the file originally contained a unit row (below the header),</span>
@@ -1151,8 +1139,7 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
 
             <details class="quote">
               <summary>Source code in <code>pySWATPlus/FileReader.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
-<span class="normal">14</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
@@ -1215,18 +1202,13 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
 <span class="normal">74</span>
 <span class="normal">75</span>
 <span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span>
     <span class="n">has_units</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">usecols</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">filter_by</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Initialize a FileReader instance to read data from a TXT file.</span>
 
@@ -1272,11 +1254,7 @@ from a TXT file located in the <code>TxtInOut</code> folder.</p>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">header_file</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_fwf</span><span class="p">(</span>
-        <span class="n">path</span><span class="p">,</span>
-        <span class="n">skiprows</span><span class="o">=</span><span class="n">skip_rows</span><span class="p">,</span>
-        <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span>
-    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">_load_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">skip_rows</span><span class="o">=</span><span class="n">skip_rows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span><span class="p">)</span>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
 
@@ -1312,7 +1290,11 @@ it will be preserved and written back as part of the output.</p>
 
             <details class="quote">
               <summary>Source code in <code>pySWATPlus/FileReader.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 83</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
 <span class="normal"> 84</span>
 <span class="normal"> 85</span>
 <span class="normal"> 86</span>
@@ -1343,15 +1325,9 @@ it will be preserved and written back as part of the output.</p>
 <span class="normal">111</span>
 <span class="normal">112</span>
 <span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">overwrite_file</span><span class="p">(</span>
+<span class="normal">114</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">overwrite_file</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Overwrite the original TXT file with the modified DataFrame content.</span>
 <span class="sd">    If the file originally contained a unit row (below the header),</span>
