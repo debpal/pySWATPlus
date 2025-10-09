@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../performance_metrics/">
+        <link rel="prev" href="../swatplus_simulation/">
       
       
-        <link rel="next" href="../../CONTRIBUTING/">
+        <link rel="next" href="../../api/txtinout_reader/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>pySWATPlus.types - pySWATPlus</title>
+        <title>Sensitivity Interface - pySWATPlus</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pySWATPlus.types.ModifyType" class="md-skip">
+        <a href="#sensitivity-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              pySWATPlus.types
+              Sensitivity Interface
             
           </span>
         </div>
@@ -184,11 +184,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../userguide/swatplus_simulation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../swatplus_simulation/" class="md-tabs__link">
           
   
   
@@ -204,13 +206,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../txtinout_reader/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../api/txtinout_reader/" class="md-tabs__link">
           
   
   
@@ -319,24 +319,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -349,7 +354,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -363,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../userguide/swatplus_simulation/" class="md-nav__link">
+      <a href="../swatplus_simulation/" class="md-nav__link">
         
   
   
@@ -383,10 +388,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../userguide/sensitivity_interface/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sensitivity Interface
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -397,6 +424,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobol-based-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobol-Based Interface
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -409,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../userguide/data_analysis.md" class="md-nav__link">
+      <a href="../data_analysis.md" class="md-nav__link">
         
   
   
@@ -436,29 +501,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -471,7 +531,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -485,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../txtinout_reader/" class="md-nav__link">
+      <a href="../../api/txtinout_reader/" class="md-nav__link">
         
   
   
@@ -508,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_manager/" class="md-nav__link">
+      <a href="../../api/data_manager/" class="md-nav__link">
         
   
   
@@ -531,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sensitivity_analyzer/" class="md-nav__link">
+      <a href="../../api/sensitivity_analyzer/" class="md-nav__link">
         
   
   
@@ -554,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance_metrics/" class="md-nav__link">
+      <a href="../../api/performance_metrics/" class="md-nav__link">
         
   
   
@@ -574,30 +634,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    pySWATPlus.types
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/types/" class="md-nav__link">
         
   
   
@@ -608,42 +648,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pySWATPlus.types.ModifyType" class="md-nav__link">
-    <span class="md-ellipsis">
-      ModifyType
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pySWATPlus.types.BoundType" class="md-nav__link">
-    <span class="md-ellipsis">
-      BoundType
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -717,6 +721,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -725,18 +731,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pySWATPlus.types.ModifyType" class="md-nav__link">
+  <a href="#configuration-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      ModifyType
+      Configuration Settings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pySWATPlus.types.BoundType" class="md-nav__link">
+  <a href="#sobol-based-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      BoundType
+      Sobol-Based Interface
     </span>
   </a>
   
@@ -758,121 +764,105 @@
 
 
 
-  <h1>pySWATPlus.types</h1>
+<h1 id="sensitivity-analysis">Sensitivity Analysis</h1>
+<p>Sensitivity analysis helps quantify how variation in input parameters affects model outputs. This tutorial demonstrates how to perform sensitivity analysis on SWAT+ model parameters.<br />
+The parameter sampling is handled by the <a href="https://github.com/SALib/SALib">SALib</a> Python package using <a href="https://doi.org/10.1016/S0378-4754(00)00270-6">Sobol</a> sampling from a defined parameter space.</p>
+<h2 id="configuration-settings">Configuration Settings</h2>
+<p>Before running a sensitivity simulation, you must define the necessary configuration settings.<br />
+These settings specify key parameters such as the simulation timeline, output print options, and other essential model controls.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pySWATPlus</span>
 
-<div class="doc doc-object doc-attribute">
+<span class="c1"># Initialize the project&#39;s TxtInOut folder</span>
+<span class="n">txtinout_reader</span> <span class="o">=</span> <span class="n">pySWATPlus</span><span class="o">.</span><span class="n">TxtinoutReader</span><span class="p">(</span>
+    <span class="n">path</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Username\project\Scenarios\Default\TxtInOut&quot;</span>
+<span class="p">)</span>
 
+<span class="c1"># Copy required files to an empty custom directory</span>
+<span class="n">target_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\Username\custom_folder&quot;</span> 
+<span class="n">target_dir</span> <span class="o">=</span> <span class="n">txtinout_reader</span><span class="o">.</span><span class="n">copy_required_files</span><span class="p">(</span>
+    <span class="n">target_dir</span><span class="o">=</span><span class="n">target_dir</span>
+<span class="p">)</span>
 
+<span class="c1"># Initialize TxtinoutReader with the custom directory</span>
+<span class="n">target_reader</span> <span class="o">=</span> <span class="n">pySWATPlus</span><span class="o">.</span><span class="n">TxtinoutReader</span><span class="p">(</span>
+    <span class="n">path</span><span class="o">=</span><span class="n">target_dir</span>
+<span class="p">)</span>
 
-<h2 id="pySWATPlus.types.ModifyType" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">ModifyType</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">]]</span></code>
+<span class="c1"># Disable CSV file generation to save time</span>
+<span class="n">target_reader</span><span class="o">.</span><span class="n">disable_csv_print</span><span class="p">()</span>
 
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
+<span class="c1"># Disable daily time series in print.prt (saves time and space)</span>
+<span class="n">target_reader</span><span class="o">.</span><span class="n">enable_object_in_print_prt</span><span class="p">(</span>
+    <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">daily</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">monthly</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">yearly</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">avann</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
 
-</h2>
-
-
-    <div class="doc doc-contents first">
-
-        <p>A list of dictionaries specifying parameter changes in the <code>calibration.cal</code> file.
-Each dictionary contain the following keys:</p>
-<ul>
-<li><code>name</code> (str): <strong>Required.</strong> Name of the parameter in the <code>cal_parms.cal</code> file.</li>
-<li><code>change_type</code> (str): <strong>Required.</strong> Type of change to apply. Must be one of <code>absval</code>, <code>abschg</code>, or <code>pctchg</code>.</li>
-<li><code>value</code> (float): <strong>Required.</strong> Value of the parameter.</li>
-<li><code>units</code> (Iterable[int]): Optional. List of unit IDs to which the parameter change should be constrained.</li>
-<li><code>conditions</code> (dict[str, list[str]]): Optional. Conditions to apply when changing the parameter.
-  Supported keys include <code>'hsg'</code>, <code>'texture'</code>, <code>'plant'</code>, and <code>'landuse'</code>, each mapped to a list of allowed values.</li>
-</ul>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;cn2&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;pctchg&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;perco&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;absval&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="s1">&#39;conditions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;hsg&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]}</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;bf_max&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;absval&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
-        <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">194</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+<span class="c1"># Run a trial simulation to verify expected time series outputs</span>
+<span class="n">target_reader</span><span class="o">.</span><span class="n">run_swat</span><span class="p">(</span>
+    <span class="n">begin_date</span><span class="o">=</span><span class="s1">&#39;01-Jan-2010&#39;</span><span class="p">,</span>
+    <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;31-Dec-2012&#39;</span><span class="p">,</span>
+    <span class="n">warmup</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">print_prt_control</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;channel_sd&#39;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>  <span class="c1"># enable daily time series for &#39;channel_sd&#39;</span>
 </code></pre></div>
-</details>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="pySWATPlus.types.BoundType" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">BoundType</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">]]</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h2>
-
-
-    <div class="doc doc-contents first">
-
-        <p>A list of dictionaries defining parameter configurations for sensitivity simulations.
-Each dictionary contain the following keys:</p>
+<h2 id="sobol-based-interface">Sobol-Based Interface</h2>
+<p>This high-level interface builds on the above configuration to run sensitivity simulations using Sobol sampling. It includes:</p>
 <ul>
-<li><code>name</code> (str): <strong>Required.</strong> Name of the parameter in the <code>cal_parms.cal</code> file.</li>
-<li><code>change_type</code> (str): <strong>Required.</strong> Type of change to apply. Must be one of <code>absval</code>, <code>abschg</code>, or <code>pctchg</code>.</li>
-<li><code>lower_bound</code> (float): <strong>Required.</strong> Lower bound for the parameter.</li>
-<li><code>upper_bound</code> (float): <strong>Required.</strong> Upper bound for the parameter.</li>
-<li><code>units</code> (Iterable[int]): Optional. List of unit IDs to which the parameter change should be constrained.</li>
-<li><code>conditions</code> (dict[str, list[str]]): Optional. Conditions to apply when changing the parameter.
-  Supported keys include <code>'hsg'</code>, <code>'texture'</code>, <code>'plant'</code>, and <code>'landuse'</code>, each mapped to a list of allowed values.</li>
+<li>Automatic generation of Sobol samples for the parameter space  </li>
+<li>Parallel computation to speed up simulations  </li>
+<li>Output extraction with filtering options</li>
+<li>Structured export of results for downstream analysis  </li>
 </ul>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sensitivity parameter space</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;cn2&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;pctchg&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;lower_bound&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-        <span class="s1">&#39;upper_bound&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;esco&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;absval&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;lower_bound&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;upper_bound&#39;</span><span class="p">:</span> <span class="mi">1</span>
     <span class="p">},</span>
     <span class="p">{</span>
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;perco&#39;</span><span class="p">,</span>
         <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;absval&#39;</span><span class="p">,</span>
         <span class="s1">&#39;lower_bound&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;upper_bound&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;conditions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;hsg&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]}</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;bf_max&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;change_type&#39;</span><span class="p">:</span> <span class="s1">&#39;absval&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;lower_bound&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-        <span class="s1">&#39;upper_bound&#39;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span>
-        <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">194</span><span class="p">)</span>
+        <span class="s1">&#39;upper_bound&#39;</span><span class="p">:</span> <span class="mi">1</span>
     <span class="p">}</span>
 <span class="p">]</span>
-</code></pre></div>
-</details>
-    </div>
 
-</div>
+<span class="c1"># Target data extraction from sensitivity simulation</span>
+<span class="n">simulation_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;channel_sdmorph_yr.txt&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;has_units&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;ref_day&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s1">&#39;ref_month&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s1">&#39;apply_filter&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;gis_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">561</span><span class="p">]},</span>
+        <span class="s1">&#39;usecols&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;gis_id&#39;</span><span class="p">,</span> <span class="s1">&#39;flo_out&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;channel_sd_mon.txt&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;has_units&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;begin_date&#39;</span><span class="p">:</span> <span class="s1">&#39;01-Jun-2011&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ref_day&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s1">&#39;apply_filter&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;cha561&#39;</span><span class="p">],</span> <span class="s1">&#39;yr&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2012</span><span class="p">]},</span>
+        <span class="s1">&#39;usecols&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;gis_id&#39;</span><span class="p">,</span> <span class="s1">&#39;flo_out&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Sensitivity simulation</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">pySWATPlus</span><span class="o">.</span><span class="n">SensitivityAnalyzer</span><span class="p">()</span><span class="o">.</span><span class="n">simulation_by_sobol_sample</span><span class="p">(</span>
+        <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span>
+        <span class="n">sample_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">simulation_folder</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Username\simulation_folder&quot;</span><span class="p">,</span>
+        <span class="n">txtinout_folder</span><span class="o">=</span><span class="n">target_dir</span><span class="p">,</span>
+        <span class="n">simulation_data</span><span class="o">=</span><span class="n">simulation_data</span><span class="p">,</span>
+        <span class="n">clean_setup</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div>
 
 
 
