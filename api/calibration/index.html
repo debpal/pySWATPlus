@@ -1061,7 +1061,6 @@ are same as keys of <code>extract_data</code> (e.g., <code>channel_sd_day.txt</c
 <li><code>GA</code>: Genetic Algorithm (<strong>single-objective</strong>).</li>
 <li><code>DE</code>: <a href="https://doi.org/10.1007/3-540-31306-0">Differential Evolution Algorithm</a> (<strong>single-objective</strong>).</li>
 <li><code>NSGA2</code>: <a href="https://doi.org/10.1109/4235.996017">Non-dominated sorted Genetic Algorithm - II</a> (<strong>multi-objective</strong>).</li>
-<li><code>AGEMOEA2</code>: <a href="https://doi.org/10.1145/3512290.3528732">Adaptive Geometry Estimation based Multi-objective Evolutionary Algorithm - II</a> (<strong>multi-objective</strong>).</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1760,9 +1759,7 @@ therefore, selecting a <code>pop_size</code> of 16 or 32 may improve efficiency.
 <span class="normal">635</span>
 <span class="normal">636</span>
 <span class="normal">637</span>
-<span class="normal">638</span>
-<span class="normal">639</span>
-<span class="normal">640</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Calibration</span><span class="p">(</span><span class="n">pymoo</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">problem</span><span class="o">.</span><span class="n">Problem</span><span class="p">):</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="normal">638</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Calibration</span><span class="p">(</span><span class="n">pymoo</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">problem</span><span class="o">.</span><span class="n">Problem</span><span class="p">):</span>  <span class="c1"># type: ignore[misc]</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Warning:</span>
 <span class="sd">        This class is currently under development.</span>
@@ -1907,7 +1904,6 @@ therefore, selecting a <code>pop_size</code> of 16 or 32 may improve efficiency.
 <span class="sd">            - `GA`: Genetic Algorithm (**single-objective**).</span>
 <span class="sd">            - `DE`: [Differential Evolution Algorithm](https://doi.org/10.1007/3-540-31306-0) (**single-objective**).</span>
 <span class="sd">            - `NSGA2`: [Non-dominated sorted Genetic Algorithm - II](https://doi.org/10.1109/4235.996017) (**multi-objective**).</span>
-<span class="sd">            - `AGEMOEA2`: [Adaptive Geometry Estimation based Multi-objective Evolutionary Algorithm - II](https://doi.org/10.1145/3512290.3528732) (**multi-objective**).</span>
 
 <span class="sd">            !!! Note</span>
 <span class="sd">                Multi-objective algorithms can be used for single-objective optimization, but not vice versa.</span>
@@ -2053,7 +2049,7 @@ therefore, selecting a <code>pop_size</code> of 16 or 32 may improve efficiency.
         <span class="c1"># Display start of current generation number</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">track_gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">track_gen</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="si">}</span><span class="s1">Started generation: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">track_gen</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">n_gen</span><span class="si">}{</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Started generation: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">track_gen</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">n_gen</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="p">)</span>
 
         <span class="c1"># Simulation in separate CPU</span>
@@ -2141,7 +2137,7 @@ therefore, selecting a <code>pop_size</code> of 16 or 32 may improve efficiency.
 
         <span class="c1"># Print end of current generation number</span>
         <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="si">}</span><span class="s1">Completed generation: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">track_gen</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">n_gen</span><span class="si">}{</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Completed generation: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">track_gen</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">n_gen</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_objectives_directions</span><span class="p">(</span>
@@ -2261,8 +2257,7 @@ therefore, selecting a <code>pop_size</code> of 16 or 32 may improve efficiency.
         <span class="n">api_module</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;GA&#39;</span><span class="p">:</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;pymoo.algorithms.soo.nonconvex.ga&#39;</span><span class="p">),</span>
             <span class="s1">&#39;DE&#39;</span><span class="p">:</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;pymoo.algorithms.soo.nonconvex.de&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;NSGA2&#39;</span><span class="p">:</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;pymoo.algorithms.moo.nsga2&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;AGEMOEA2&#39;</span><span class="p">:</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;pymoo.algorithms.moo.age2&#39;</span><span class="p">)</span>
+            <span class="s1">&#39;NSGA2&#39;</span><span class="p">:</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;pymoo.algorithms.moo.nsga2&#39;</span><span class="p">)</span>
         <span class="p">}</span>
 
         <span class="c1"># Check algorithm name is valid</span>
@@ -2484,7 +2479,9 @@ convergence trends, performance indicators, and visualization.</p>
 
             <details class="quote">
               <summary>Source code in <code>pySWATPlus/calibration.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">536</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
 <span class="normal">537</span>
 <span class="normal">538</span>
 <span class="normal">539</span>
@@ -2586,9 +2583,7 @@ convergence trends, performance indicators, and visualization.</p>
 <span class="normal">635</span>
 <span class="normal">636</span>
 <span class="normal">637</span>
-<span class="normal">638</span>
-<span class="normal">639</span>
-<span class="normal">640</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parameter_optimization</span><span class="p">(</span>
+<span class="normal">638</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parameter_optimization</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
