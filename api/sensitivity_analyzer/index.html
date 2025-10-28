@@ -1721,7 +1721,8 @@
 <span class="normal">881</span>
 <span class="normal">882</span>
 <span class="normal">883</span>
-<span class="normal">884</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SensitivityAnalyzer</span><span class="p">:</span>
+<span class="normal">884</span>
+<span class="normal">885</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SensitivityAnalyzer</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Provide functionality for sensitivity analyzis.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -2539,9 +2540,10 @@
                     <span class="n">norm_col</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span>
                 <span class="p">)</span>
                 <span class="c1"># Indicator method from abbreviation</span>
+                <span class="n">ind_abbr</span> <span class="o">=</span> <span class="n">metric_config</span><span class="p">[</span><span class="n">m</span><span class="p">][</span><span class="s1">&#39;indicator&#39;</span><span class="p">]</span>
                 <span class="n">ind_method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
                     <span class="n">PerformanceMetrics</span><span class="p">(),</span>
-                    <span class="sa">f</span><span class="s1">&#39;compute_</span><span class="si">{</span><span class="n">metric_config</span><span class="p">[</span><span class="n">m</span><span class="p">][</span><span class="s1">&#39;indicator&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;compute_</span><span class="si">{</span><span class="n">ind_abbr</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
                 <span class="p">)</span>
                 <span class="c1"># Indicator value computed from method</span>
                 <span class="n">ind_val</span> <span class="o">=</span> <span class="n">ind_method</span><span class="p">(</span>
@@ -3713,7 +3715,8 @@ are same as keys of <code>extract_data</code> (e.g., <code>channel_sd_day.txt</c
 <span class="normal">881</span>
 <span class="normal">882</span>
 <span class="normal">883</span>
-<span class="normal">884</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simulation_and_indices</span><span class="p">(</span>
+<span class="normal">884</span>
+<span class="normal">885</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simulation_and_indices</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">parameters</span><span class="p">:</span> <span class="n">newtype</span><span class="o">.</span><span class="n">BoundType</span><span class="p">,</span>
     <span class="n">sample_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -4034,9 +4037,10 @@ are same as keys of <code>extract_data</code> (e.g., <code>channel_sd_day.txt</c
                 <span class="n">norm_col</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span>
             <span class="p">)</span>
             <span class="c1"># Indicator method from abbreviation</span>
+            <span class="n">ind_abbr</span> <span class="o">=</span> <span class="n">metric_config</span><span class="p">[</span><span class="n">m</span><span class="p">][</span><span class="s1">&#39;indicator&#39;</span><span class="p">]</span>
             <span class="n">ind_method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
                 <span class="n">PerformanceMetrics</span><span class="p">(),</span>
-                <span class="sa">f</span><span class="s1">&#39;compute_</span><span class="si">{</span><span class="n">metric_config</span><span class="p">[</span><span class="n">m</span><span class="p">][</span><span class="s1">&#39;indicator&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
+                <span class="sa">f</span><span class="s1">&#39;compute_</span><span class="si">{</span><span class="n">ind_abbr</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
             <span class="p">)</span>
             <span class="c1"># Indicator value computed from method</span>
             <span class="n">ind_val</span> <span class="o">=</span> <span class="n">ind_method</span><span class="p">(</span>
