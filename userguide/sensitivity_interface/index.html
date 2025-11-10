@@ -876,6 +876,12 @@ Currently, it supports <a href="https://doi.org/10.1016/S0378-4754(00)00270-6">S
 <li>Output extraction with filtering options  </li>
 <li>Structured export of results for downstream analysis</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before executing the following high-level interafce, comment out the code shown in
+<a href="https://swat-model.github.io/pySWATPlus/userguide/sensitivity_interface/#configuration-settings"><code>Configuration Settings</code></a>
+to avoid overwriting configuration files that may occur when rerunning the setup, which could affect the target results.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="c1"># Define parameter space</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -935,7 +941,7 @@ Currently, it supports <a href="https://doi.org/10.1016/S0378-4754(00)00270-6">S
 <span class="p">)</span>
 </code></pre></div>
 <h2 id="integrated-simulation-and-sensitivity">Integrated Simulation and Sensitivity</h2>
-<p>To compute sensitivity indices directly for multiple outputs against observed data and skip saving the detailed simulation results, use the following interface:</p>
+<p>To compute sensitivity indices for multiple outputs against observed data without saving detailed simulation time series for each parameter sample, use the following interface.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Define parameter space</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span>

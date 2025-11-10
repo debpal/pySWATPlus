@@ -826,7 +826,7 @@
 <h1 id="swat-simulation">SWAT+ Simulation</h1>
 <p><code>pySWATPlus</code> executes <a href="https://swat.tamu.edu/software/plus/">SWAT+</a> simulations using the <code>TxtInOut</code> folder generated during project creation with <a href="https://github.com/swat-model/QSWATPlus">QSWAT+</a>.</p>
 <p>To run a <code>SWAT+</code> simulation, the <code>TxtInOut</code> folder must include all required input files, which are created during simulation setup in the <a href="https://github.com/swat-model/swatplus-editor">SWAT+ Editor</a> via <code>QSWAT+</code>.</p>
-<p>Additionally, the <code>TxtInOut</code> folder must contain the <code>SWAT+</code> executable. If you need help locating it, open the <strong><code>Run SWAT+</code></strong> tab in the <code>SWAT+ Editor</code> to find its path. Once located, copy the executable file into the <code>TxtInOut</code> folder. If the executable is missing, the simulation will fail.</p>
+<p>Additionally, the <code>TxtInOut</code> folder must contain the <code>SWAT+</code> executable. The executable file compatible with your operating system and <code>SWAT+</code> version can be obtained from the <a href="https://github.com/swat-model/swatplus/releases">official GitHub releases</a>.</p>
 <p>Once the <code>TxtInOut</code> folder is properly configured with the necessary input files and the <code>SWAT+</code> executable, you can initialize the <code>TxtinoutReader</code> class to interact with the <code>SWAT+</code> model:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pySWATPlus</span>
 
